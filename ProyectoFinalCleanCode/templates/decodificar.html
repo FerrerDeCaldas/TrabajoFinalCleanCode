@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decode Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Decode Text</h1>
+    <form method="POST">
+        <label for="text_to_decode">Text to Decode:</label>
+        <textarea id="text_to_decode" name="text_to_decode" required></textarea>
+        <button type="submit">decodificar</button>
+    </form>
+    {% if original and decoded %}
+        <h2>Result</h2>
+        <p>Encoded Text: {{ original }}</p>
+        <p>Decoded Text: {{ decoded }}</p>
+    {% endif %}
+</body>
+</html>
